@@ -1,0 +1,77 @@
+<html !DOCTYPE>
+    <head>
+        <style>
+            body {
+                margin: 0;
+                --background-color: #181818;
+                --secondary-background-color: #363636;
+                --link-text-color: green;
+                font-family: 'Arial';
+                color: #c2c2c2;
+                background-color: var(--background-color);
+            }
+
+            a {
+                color: var(--link-text-color);
+            }
+
+            section {
+                margin-left: 5px;
+                margin-bottom: 50px;
+            }
+
+            .link {
+                margin: 10px;
+            }
+
+            .navbar {
+                background-color: var(--secondary-background-color);
+            }
+        </style>
+        <title>Andrei's Diary</title>
+    </head>
+    <body>
+        <div class="navbar">
+            <a class="link" href="index.html">DIARY</a>
+            <a class="link" href="https://twitter.com/fovy9">twitter</a>
+
+        </div>
+        <br>
+
+        <!-- Musics --!>
+        <section>
+            <h2>Musics</h2>
+            <p>some songs i made in my free time</p>
+            <ul id="music-list"></ul>
+        </section>
+	<!-- Games --!>
+        <section>
+            <h2>Games</h2>
+            <p>games that i probably won't finish</p>
+        </section>
+    </body>
+
+    <script type="text/javascript">
+        const musicList = document.getElementById("music-list");
+        let musics = [
+            ["Nostalgia", "./snd/nostalgia/nostalgia.mp3"],
+            ["Catnip", "./snd/nostalgia/outro.mp3"],
+            ["Coziness", "./snd/nostalgia/coziness.mp3"],
+            ["", ""],
+        ];
+
+        for(let i = 0; i < musics.length; i++) {
+            add_element(musics[i][0], musics[i][1]);
+        }
+
+        function add_element(name, link) {
+            var li = document.createElement("li");
+            var a = document.createElement("a");
+            a.href = link;
+            a.innerHTML = name;
+            li.appendChild(a);
+            musicList.appendChild(li);
+        }
+
+    </script>
+</html>
