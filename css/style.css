@@ -1,0 +1,21 @@
+
+body {
+  margin: 0;
+  --background-color: #181818;
+  --secondary-background-color: #363636;
+  --link-text-color: green;
+  --default-border-color: blue;
+  font-family: "Arial";
+  color: #c2c2c2;
+  background-color: var(--background-color);
+}
+
+a {
+  color: var(--link-text-color);
+}
+
+section {
+  margin-left: 5px;
+  margin-bottom: 50px;
+}
+

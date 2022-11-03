@@ -1,0 +1,18 @@
+.link {
+  margin: 10px;
+}
+
+.navbar {
+  background-color: var(--secondary-background-color);
+}
+
+.gamin-o-gaming {
+  width: fit-content;
+  margin: 25px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#music-list li {
+  margin: 5px 0;
+}
