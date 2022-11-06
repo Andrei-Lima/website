@@ -5,7 +5,7 @@ body {
   --secondary-background-color: #363636;
   --link-text-color: green;
   --default-border-color: blue;
-  font-family: "Arial";
+  font-family: times; 
   color: #c2c2c2;
   background-color: var(--background-color);
 }

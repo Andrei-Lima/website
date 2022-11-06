@@ -2,16 +2,34 @@
 	<head>
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/index.css" />
+		<style>
+			#quote-list {
+			}
+		</style>
     <title>Andrei's Diary</title>
   </head>
   <body>
-    <!-- Musics --!>
     <div class="navbar">
       <a class="link" href="index.html">DIARY</a>
       <a class="link" href="https://twitter.com/fovy9">twitter</a>
 			<a class="link" href="sim.html">simulation</a>
 			<a class="link" href="music.html">musics</a>
     </div>
-	<br>
+		<br>
+		
+		<section>
+			<h2>Daily Diary</h2>
+			<p>I will submit a new quote every day, hopefully</p>		
+			<div id="quote-list">
+				<div class="quote"><p id="0"></p></div>
+				<div class="quote"><p id="1"></p></div>
+				<div class="quote"><p id="2"></p></div>
+				<div class="quote"><p id="3"></p></div>
+				<div class="quote"><p id="4"></p></div>
+			</div>
+			<button onclick="c(-1)">Previous</button>
+			<button onclick="c(1)">Next</button>
+		</section>
+		<script src="./js/diary.js"></script>
   </body>
 </html>
