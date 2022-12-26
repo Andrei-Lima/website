@@ -1,42 +1,95 @@
-.link {
-  margin: 10px;
+.begin {
+	width: 100%;
+	height: 100%; 
+	
+	display: flex;
+}
+
+.begin-item {
+	width: 50%;
+}
+
+.middle-content {
+	width: 100%;
+	margin: 0 auto;
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	
+	text-align: center;
+}
+
+.logo {
+	font-size: 80px;
 }
 
 .navbar {
-  background-color: var(--secondary-background-color);
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	text-align: center;	
 }
 
-.gamin-o-gaming {
-  width: fit-content;
-  margin: 25px;
-  padding: 10px;
-  border-radius: 10px;
+.navbar ul {
+	padding: 0;
+	
+	display: flex;
+	align-items: center;
 }
 
-#music-list li {
-  margin: 5px 0;
+.navbar li {
+	width: 135px;
+	list-style: none;
+	margin: 0 10px;
+	padding: 5px 10px;
+	
+	border: 1px solid var(--link-color-dark);
+
+	transition: .5s ease;
 }
 
-#quote-list {
-	width: fit-content;
-	margin: 10px;
-	border: 1px solid var(--secondary-background-color);
-	border-radius: 5px;
-	padding: 10px 25px;
+.navbar li:hover {
+	background-color: #ffffff10;
 }
 
-.quote {
-	width: fit-content;
-	border-bottom: 1px solid var(--secondary-background-color);
-	margin: 10px 0;
+
+.navbar a {
+	font-size: 32px;
+	text-decoration: none;
+	color: var(--link-color-dark);
+	user-select: none;
 }
-.quote p {
+
+.footer {
+	position: absolute;
+	bottom: 10;
+}
+
+.footer ul {
 	margin: 0;
 	padding: 0;
+	display: flex;
+	
 }
 
-@media screen and (max-width: 1200px) {
-	.navbar {
-		font-size: 24px;
-	}
+.footer ul li {
+	list-style: none;
+	width: 20px;
+	height: 20px;
+	padding: 10px;
+	background-color: var(--border-color-dark);
+	border-radius: 50%;
+	margin: 0 5px;
+	transition: .5s ease;
 }
+
+.footer li:hover {
+	background-color: var(--text-color-dark);
+}
+
+.footer a img {
+	width: 20px;
+}
+
