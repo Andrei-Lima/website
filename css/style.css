@@ -13,12 +13,12 @@ body {
 	--border-color-dark: #63686E;
 }
 
-.dark {
+#dark {
 	/*background-color: var(--background-color-dark); 
 	*/
 	color: var(--text-color-dark);
-	background: rgb(11, 18, 25);
-	background: linear-gradient(45deg, var(--background-color-dark) 50%, #142a41 150%);
+	background: var(--background-color-dark);
+	
 }
 
 .light {
