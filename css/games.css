@@ -1,0 +1,50 @@
+
+body {
+	background-color: var(--background-color-dark);
+	color: white;
+}
+
+.top-header {
+	background: linear-gradient(0deg, var(--background-color-dark) 0%, #142a41 100%);
+
+
+	padding: 50px 0;
+	text-align: center;
+	border-bottom: 2px solid var(--border-color-dark);
+}
+
+.title h1 {
+	font-size: 3.5rem;
+	font-weight: normal;
+}
+
+.title p {
+	font-size: 1.5rem;
+}
+
+.top-games {
+	margin-top: 25px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.top-game-item {
+	width: fit-content;
+	padding: 15px;
+	display: flex;
+	flex-direction: column;
+	
+	background-color: #ffffff10;
+	margin: 0 10px;
+
+	border-radius: 5px;
+}
+
+.top-game-item img {
+	width: 200px;
+	border-radius: 5px;
+	
+}
+
