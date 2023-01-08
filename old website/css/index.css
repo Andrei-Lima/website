@@ -1,0 +1,42 @@
+.link {
+  margin: 10px;
+}
+
+.navbar {
+  background-color: var(--secondary-background-color);
+}
+
+.gamin-o-gaming {
+  width: fit-content;
+  margin: 25px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#music-list li {
+  margin: 5px 0;
+}
+
+#quote-list {
+	width: fit-content;
+	margin: 10px;
+	border: 1px solid var(--secondary-background-color);
+	border-radius: 5px;
+	padding: 10px 25px;
+}
+
+.quote {
+	width: fit-content;
+	border-bottom: 1px solid var(--secondary-background-color);
+	margin: 10px 0;
+}
+.quote p {
+	margin: 0;
+	padding: 0;
+}
+
+@media screen and (max-width: 1200px) {
+	.navbar {
+		font-size: 24px;
+	}
+}
