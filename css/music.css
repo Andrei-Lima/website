@@ -1,0 +1,38 @@
+
+.album-select {
+	text-align: center;
+
+	margin-top: 50px;
+}
+
+.buttons {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.buttons button {
+	cursor: pointer;
+	margin: 15px;
+}
+
+.buttons img {
+	width: 150px;
+	border-radius: 10px;
+}
+
+.title {
+	text-align: center;
+}
+
+#music-list {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#music-list audio {
+	margin: 10px;
+}
+
