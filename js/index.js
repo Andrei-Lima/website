@@ -1,4 +1,5 @@
 let links = [
+	["game.html", "Games"],
 	["video.html", "Videos"],
 	["music.html", "Musics"],
 	["terrarium.html", "Terrariums"],

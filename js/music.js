@@ -23,7 +23,6 @@ let list = [
 		cover: "./img/albums/waw.png",
 		musics: [
 			"./snd/waw/snd3.mp3",
-			"./snd/waw/snd2.mp3",
 			"./snd/waw/snd1.mp3",
 		],
 	},
