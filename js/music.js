@@ -1,9 +1,9 @@
 
-const player = document.getElementById("audio-source");
-const btnl = document.getElementById("button-left");
-const btnr = document.getElementById("button-right");
-const id = document.getElementById("album-id");
-const t = document.getElementById("album-title");
+const player  = document.getElementById("audio-source");
+const btnl    = document.getElementById("button-left");
+const btnr    = document.getElementById("button-right");
+const id      = document.getElementById("album-id");
+const t       = document.getElementById("album-title");
 
 let list = [
 	{
@@ -11,10 +11,10 @@ let list = [
 		date: "00/00/0000",
 		cover: "./img/albums/nostalgia.png",
 		musics: [
-			"./snd/nostalgia/Nostalgia.mp3",
-			"./snd/nostalgia/outro.mp3",
-			"./snd/nostalgia/coziness.mp3",
-			"./snd/nostalgia/by the sea.mp3",
+			"./snd/nos/Nostalgia.mp3",
+			"./snd/nos/outro.mp3",
+			"./snd/nos/coziness.mp3",
+			"./snd/nos/by the sea.mp3",
 		],
 	},
 	{
