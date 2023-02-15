@@ -44,7 +44,7 @@ let list = [
 	},
 ];
 
-let album_id = -1;
+let album_id = 0;
 
 btnl.onclick = () => {
 	if (album_id > 0) {

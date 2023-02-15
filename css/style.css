@@ -2,12 +2,18 @@
 body {
 	margin: 0;
 
-	--background-color: #181818;
+	--background-color: #110011;
 	--title-color: #fff;
 	--text-color: lightgray;
+	--link-text-color: rgb(0, 255, 13);
+  --secondary-color: #46c900;
+  --dotted-border-color: rgb(53, 53, 53);
 
 	font-family: Arial;
 
-	background-color: var(--background-color);
 	color: var(--text-color);
+
+  background: linear-gradient(0deg, rgba(17,0,17,1) 80%, rgb(31, 0, 31) 100%);
+  background-repeat: no-repeat;
+	background-color: var(--background-color);
 }
