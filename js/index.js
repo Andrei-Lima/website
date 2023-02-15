@@ -5,8 +5,8 @@ let links = [
 ];
 
 let games = [
-  ["./img/games/failure.png", "Economic Failure", "", "Shooter | 2023"],
-  ["./img/games/iso.png", "Gray Infection", "", "Survival | 2023"],
+  ["./img/Games/failure.png", "Economic Failure", "", "Shooter | 2023"],
+  ["./img/Games/iso.png", "Gray Infection", "", "Survival | 2023"],
 ];
 
 //#region links
