@@ -15,6 +15,7 @@ let list = [
 			"./snd/nos/outro.mp3",
 			"./snd/nos/coziness.mp3",
 			"./snd/nos/by the sea.mp3",
+			"./snd/nos/could be better.mp3",
 			"./snd/nos/waterfall.mp3",
 		],
 	},

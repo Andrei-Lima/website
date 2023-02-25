@@ -132,4 +132,12 @@
   #game-carousel {
     width: 100%;
   }
+
+  .game-item {
+    width: 45%;
+  }
+
+  #game-carousel img {
+    width: 45%;
+  }
 }
