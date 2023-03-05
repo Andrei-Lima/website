@@ -3,6 +3,8 @@
   display: flex;
   justify-content: center;
   padding: 0;
+
+  margin-top: 100px;
 }
 
 .links li {
@@ -16,7 +18,7 @@
 }
 
 .links li:hover {
-  background-color: #215E00;
+  background-color: var(--link-text-color);
 }
 
 .links a {
@@ -33,8 +35,8 @@
 .intro {
   width: 60%;
   margin: 0 auto;
-  margin-top: 80px;
   font-size: 18px;
+  margin-top: 100px;
 
   text-align: center;
 }
