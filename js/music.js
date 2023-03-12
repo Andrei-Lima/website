@@ -41,6 +41,7 @@ let list = [
 			"./snd/falhaeconomica/bar.mp3",
 			"./snd/falhaeconomica/duck.mp3",
 			"./snd/falhaeconomica/rekognition.mp3",
+			"./snd/falhaeconomica/yeah.mp3",
 		],
 	},
 ];
