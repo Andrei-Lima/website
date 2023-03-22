@@ -19,6 +19,22 @@
   <div class="games">
     <div id="game-carousel"></div>
   </div>
+
+  <video autoplay="true" id="videoElement">
+
+  </video>
 	<script src="./js/index.js"></script>
 </body>
+<script type="text/javascript">
+  if (navigator.mediaDevices.getUserMedia) {
+    navigator.mediaDevices.getUserMedia({ video: true })
+      .then(function (stream) {
+        video.srcObject = stream;
+      })
+      .catch(function (err0r) {
+        console.log("Something went wrong!");
+      });
+  }
+</script>
+
 </html>

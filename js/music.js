@@ -7,6 +7,14 @@ const t       = document.getElementById("album-title");
 
 let list = [
 	{
+		title: "Horrific",
+		date: "22/03/2023",
+		cover: "./img/albums/horrific.png",
+		musics: [
+			"./snd/horrific/horrific.mp3",
+		],
+	},
+	{
 		title: "nostalgia",
 		date: "00/00/0000",
 		cover: "./img/albums/nostalgia.png",
