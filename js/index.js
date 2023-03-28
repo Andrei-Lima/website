@@ -7,6 +7,7 @@ let links = [
 let games = [
   ["./img/Games/failure.png", "Economic Failure", "", "Shooter | 2023"],
   ["./img/Games/iso.png", "Gray Infection", "", "Survival | 2023"],
+	["./img/Games/armario.png", "Armario", "./files/armario.7z", "Maker | 2023"],
 ];
 
 //#region links
@@ -48,6 +49,7 @@ for (let g = 0; g < games.length; g++) {
   
   var a = document.createElement("a");
   a.innerHTML = games[g][1];
+	a.href = games[g][2];
 
   var span = document.createElement("span");
   span.innerHTML = games[g][3];

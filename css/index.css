@@ -45,6 +45,15 @@
   font-weight: lighter;
 }
 
+.intro a {
+	color: var(--text-color);
+	transition: .5s ease;
+}
+
+.intro a:hover {
+	color: gray;
+}
+
 .header {
   margin-top: 100px;
   text-align: center;
@@ -143,3 +152,4 @@
     width: 45%;
   }
 }
+
