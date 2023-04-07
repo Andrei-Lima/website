@@ -24,8 +24,6 @@ window.onload = () => {
 function draw() {
 	for(var i = 0; i < world.length; i++) {
 		ctx.fillRect(world[i].x, world[i].y, CELL, CELL);
-		
-		
 	}
 }
 

@@ -1,10 +1,10 @@
-let links = [
+const links = [
 	["music.html", "Musics"],
 	["video.html", "Videos"],
 	["terrarium.html", "Terrariums"],
 ];
 
-let games = [
+const games = [
   ["./img/Games/failure.png", "Economic Failure", "", "Shooter | 2023"],
   ["./img/Games/iso.png", "Gray Infection", "", "Survival | 2023"],
 	["./img/Games/armario.png", "Armario", "./files/armario.7z", "Maker | 2023"],
