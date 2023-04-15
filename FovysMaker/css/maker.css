@@ -1,0 +1,108 @@
+
+body {
+	margin: 0;
+	text-align: center;
+
+	--navbar-color: gray;
+}
+
+.top-header {
+	text-align: center;
+}
+
+.title {
+	font-size: 24px;
+}
+
+.subtitle {
+	font-size: 24px;
+	border-bottom: 1px solid var(--navbar-color);
+}
+
+.sections {
+
+	width: 50%;
+	border-bottom: 1px solid var(--navbar-color);
+	margin: 100px auto;
+	font-size: 24px;
+	text-align: left;
+}
+
+.sections span {
+	padding: 0 18px;
+}
+
+.sel {
+	background-color: var(--navbar-color);
+	border: 1px solid var(--navbar-color);
+}
+
+.content {
+  width: 50%;
+  height: 500px;
+  margin: 0 auto;
+}
+
+.content h1 {
+  margin: 0;
+  padding: 25px 0;
+}
+
+
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.discord {
+  width: fit-content;
+  margin: 25px;
+  padding: 5px 10px;
+  border-radius: 10px;
+
+  background-color: rgb(42, 170, 179);
+}
+
+.discord a {
+  color: black;
+  text-decoration: none;
+}
+
+.discord a:hover {
+  text-decoration: underline;
+}
+
+.download {
+  width: fit-content;
+  margin: 25px;
+  padding: 5px 10px;
+  border-radius: 10px;
+
+  background-color: rgb(42, 179, 42);
+}
+
+.download a {
+  color: black;
+  text-decoration: none;
+}
+
+.download a:hover {
+  text-decoration: underline;
+}
+
+#maps {
+  margin: 0 100px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#maps a {
+  color: white;
+  padding: 10px;
+  font-size: 24px;
+}
+

@@ -5,9 +5,7 @@ const links = [
 ];
 
 const games = [
-  ["./img/Games/failure.png", "Economic Failure", "", "Shooter | 2023"],
-  ["./img/Games/iso.png", "Gray Infection", "", "Survival | 2023"],
-	["./img/Games/armario.png", "Armario", "./files/armario.7z", "Maker | 2023"],
+	["./img/Games/armario.png", "Fovy Maker", "./FovysMaker/index.html", "Maker | 2023"],
 ];
 
 //#region links
@@ -60,7 +58,5 @@ for (let g = 0; g < games.length; g++) {
 
   game_list.appendChild(div);
 }
-
-
 
 //#endregion
