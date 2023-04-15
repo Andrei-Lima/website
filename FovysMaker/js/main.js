@@ -10,7 +10,7 @@ function map(n) {
   var a = document.createElement("a");
   a.href = map_list[n][0];
   a.innerHTML = map_list[n][1];
-  a.download = true;
+  a.download = "default.txt";
 
   mapHTML.append(a);
 }
