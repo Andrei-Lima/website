@@ -5,7 +5,7 @@ const links = [
 ];
 
 const games = [
-	["./img/Games/armario.png", "Fovy Maker", "./FovysMaker/index.html", "Maker | 2023"],
+	["./img/Games/armario.png", "Ali Rage", "./AliRage/index.html", "Maker | 2023"],
 ];
 
 //#region links
