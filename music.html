@@ -3,23 +3,21 @@
 <head>
 	<link rel="stylesheet" href="./css/style.css">
 	<link rel="stylesheet" href="./css/music.css">
+
+  <title>sounds</title>
 </head>
 <body>
-	<div class="header">
-		<h1>Fovy's musics</h1>
-	</div>
 
-	<div class="album-select">
-		<div class="buttons">
-			<button id="button-left"><</button>
-			<img id="album-img">
-			<button id="button-right">></button>
-		</div>
-	</div>
-	<div class="title">
-		<h2 id="album-title">undefined</h2>
-	</div>
-	<div id="music-list"></div>
+  <div class="header">
+    <button class="button" id="button-right">></button>
+    <button class="button" id="button-left"><</button>
+    <img class="album-cover item" id="album-img">
+    <div class="title item">
+      <h2 id="album-title">undefined</h2>
+    </div>
+  </div>
+	
+  <div id="music-list"></div>
 
 	<script src="./js/music.js"></script>
 </body>
