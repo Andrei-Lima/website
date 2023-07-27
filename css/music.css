@@ -1,0 +1,141 @@
+
+.album-select {
+	text-align: center;
+
+	margin-top: 50px;
+}
+
+.button {
+  position: absolute;
+
+  --button-padding: 25px;
+  --button-padding-media: 10px;
+
+  padding: 10px 15px;
+  font-size: 36px;
+  color: white;
+  background: none;
+  border: 2px solid white;
+  border-radius: 20px;
+
+  cursor: pointer;
+  transition: .5s ease;
+}
+
+.button:hover {
+  background-color: #ffffff28;
+}
+
+#button-right {
+  right: var(--button-padding);
+}
+
+#button-left {
+  left: var(--button-padding);
+}
+
+.header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: 400px;
+  background-color: #0e0e0e;
+  justify-content: space-around;
+  padding: 0 150px;
+  width: -webkit-fill-available;
+  z-index: 1;
+  top: 0;
+}
+
+.album-cover {
+  width: 300px;
+  border-radius: 5px;
+}
+
+
+
+.title {
+	text-align: center;
+}
+
+.title h2 {
+  font-weight: lighter;
+  font-size: 60px;
+}
+
+#music-list {
+	display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  background-color: #0000004b;
+  margin: auto auto;
+  margin-top: 410px;
+  margin-bottom: 10px;
+  padding: 10px 40px;
+  border-radius: 15px;
+}
+
+#music-list audio {
+	margin: 10px;
+  width: 350px;
+}
+
+
+@media screen and (max-width: 800px) {
+  .header {
+    font-size: 40px;
+    font-weight: bolder;
+
+    height: 300px;
+
+    padding-top: 15px;
+
+    flex-direction: column;
+  }
+
+  #button-right {
+    padding: 10px 8px;
+    right: var(--button-padding-media);
+  }
+  
+  #button-left {
+    padding: 10px 8px;
+    left: var(--button-padding-media);
+  }
+
+  #album-img {
+    width: 150px;
+  }
+
+  #album-title {
+    font-size: 48px;
+    margin: 25px 0;
+  }
+
+  .item {
+    margin: 0 10px;
+  }
+
+  #music-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #0000004b;
+    margin: 0 auto;
+    margin-top: 325px;
+    margin-bottom: 10px;
+    padding: 10px 40px;
+    border-radius: 15px;
+  }
+
+  #music-list audio {
+    margin: 10px;
+    width: 100%;
+    height: 65px;
+  }
+}

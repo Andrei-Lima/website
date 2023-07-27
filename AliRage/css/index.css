@@ -1,0 +1,28 @@
+nav a {
+  transition: .5s ease;
+}
+
+.grid {
+  border: 1px solid gray;
+}
+
+p {
+  margin: 0;
+}
+
+.links {
+  position: absolute;
+  display: flex;
+  flex-direction: row-reverse;
+
+  top: 0;
+  right: 0;
+}
+
+.links a {
+  margin: 2px 10px;
+}
+
+.links img {
+  width: 25px;
+}
