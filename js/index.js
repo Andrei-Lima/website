@@ -31,7 +31,7 @@ for (let i = 0; i < links.length; i++) {
 let game_index = 1;
 
 var game_list = document.getElementById("game-carousel");
-while(game_list.firstChild) {
+while (game_list.firstChild) {
   game_list.removeChild(game_list.lastChild);
 }
 
