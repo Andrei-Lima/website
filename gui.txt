@@ -1,9 +1,171 @@
 
-function rect(x, y, w, h, c, outline) {
-	return draw_rectangle_color(
-		x-w/2, y-h/2, x+w/2, y+h/2, c, c, c, c, outline
-	);
+
+// Functions
+#region BUTTONS
+
+function button(x, y, w, h, str, c1, c2, scl, outline, func, cursor = cr_handpoint) {
+	var range = (mouse_x > x && mouse_x < x+w && mouse_y > y && mouse_y < y+h);
+	
+	if (outline) {
+		draw_rectangle_color(x, y, x+w, y+h, c2, c2, c2, c2, true);
+	}
+	
+	draw_text_transformed_color(x+w/2, y+h/2, str, scl, scl, 0, c1, c1, c1, c1, 1);
+
+	if (range) {
+		
+		draw_rectangle_color(x, y, x+w, y+h, c2, c2, c2, c2, false);
+		draw_text_transformed_color(x+w/2, y+h/2, str, scl, scl, 0, c1, c1, c1, c1, 1);
+		
+		func();
+		
+		window_set_cursor(cursor);
+		
+	} else {
+		
+	}
 }
+
+function button_clear(x, y, w, h, func) {
+	var range = (mouse_x > x && mouse_x < x+w && mouse_y > y && mouse_y < y+h);
+	if (range) {
+		func();
+	}
+}
+
+function button_input(x, y, w, h, str, offset, c1, c2, scl, outline, func) {
+	var range = (mouse_x > x && mouse_x < x+w && mouse_y > y && mouse_y < y+h);
+	
+	if (outline) {
+		draw_rectangle_color(x, y, x+w, y+h, c2, c2, c2, c2, true);
+	}
+	
+	draw_text_transformed_color((x)+offset, y+h/2, str, scl, scl, 0, c1, c1, c1, c1, 1);
+
+	if (range) {
+		window_set_cursor(cr_beam);
+		
+		draw_rectangle_color(x, y, x+w, y+h, c2, c2, c2, c2, false);
+		draw_text_transformed_color((x)+offset, y+h/2, str, scl, scl, 0, c1, c1, c1, c1, 1);
+		
+		func();
+		
+	}
+}
+
+function button_filled(x, y, w, h, str, c1, c2, c3, scl, outline, func, cursor = cr_handpoint) {
+	var range = (mouse_x > x && mouse_x < x+w && mouse_y > y && mouse_y < y+h);
+	
+	if (outline) {
+		draw_rectangle_color(x, y, x+w, y+h, c2, c2, c2, c2, true);
+		draw_rectangle_color(x, y, x+w, y+h, c2, c2, c2, c2, false);
+	}
+	
+	draw_text_transformed_color(x+w/2, y+h/2, str, scl, scl, 0, c1, c1, c1, c1, 1);
+
+	if (range) {
+		
+		draw_rectangle_color(x, y, x+w, y+h, c3, c3, c3, c3, false);
+		draw_rectangle_color(x, y, x+w, y+h, c1, c1, c1, c1, true);
+		draw_text_transformed_color(x+w/2, y+h/2, str, scl, scl, 0, c1, c1, c1, c1, 1);
+		
+		func();
+		
+		window_set_cursor(cursor);
+		
+	} else {
+		
+	}
+}
+
+function button_round(x, y, w, h, str, width, c1, c2, scl, outline, func, cursor = cr_handpoint) {
+	var range = (mouse_x > x && mouse_x < x+w && mouse_y > y && mouse_y < y+h);
+	static sublist_open = false;
+	
+	if (outline) {
+		for (var i = 0; i < width; i+=0.5) {
+			draw_roundrect_color(x+i, y+i, (x+w)-i, (y+h)-i, c2, c2, true);
+		}
+	}
+	
+	draw_text_transformed_color(x+w/2, y+h/2, str, scl, scl, 0, c1, c1, c1, c1, 1);
+
+	if (range) {
+		
+		draw_roundrect_color(x, y, x+w, y+h, c2, c2, false);
+		draw_text_transformed_color(x+w/2, y+h/2, str, scl, scl, 0, c1, c1, c1, c1, 1);
+		
+		func();
+		
+		if (mouse_check_button_pressed(mb_right)) {
+			sublist_open = !sublist_open;
+			popup_x = mouse_x;
+			popup_y = mouse_y;
+		}
+		
+		window_set_cursor(cursor);
+		
+	} else {
+	}
+	
+}
+
+function button_round_filled(x, y, w, h, str, width, c1, c2, c3, scl, outline, func, cursor = cr_handpoint) {
+	var range = (mouse_x > x && mouse_x < x+w && mouse_y > y && mouse_y < y+h);
+	
+	draw_roundrect_color(x, y, (x+w), (y+h), c3, c3, false);
+	
+	if (outline) {
+		for (var i = 0; i < width; i+=0.5) {
+			draw_roundrect_color(x+i, y+i, (x+w)-i, (y+h)-i, c2, c2, true);
+		}
+	}
+	
+	draw_text_transformed_color(x+w/2, y+h/2, str, scl, scl, 0, c1, c1, c1, c1, 1);
+
+	if (range) {
+		draw_roundrect_color(x, y, x+w, y+h, c2, c2, false);
+		draw_text_transformed_color(x+w/2, y+h/2, str, scl, scl, 0, c1, c1, c1, c1, 1);
+		
+		func();
+		
+		if (mouse_check_button_pressed(mb_right)) {
+			sublist_open = !sublist_open;
+			popup_x = mouse_x;
+			popup_y = mouse_y;
+		}
+		
+		window_set_cursor(cursor);
+	}
+}
+
+function circle_button(x, y, r, variable, func) {
+	draw_circle(x, y, r*1.2, true);
+	
+	if (variable) {
+		draw_circle(x, y, r*0.8, false);
+	}
+	
+	var range = (mouse_x > x-r/2 && mouse_x < x+r/2 && mouse_y > y-r/2 && mouse_y < y+r/2);
+	if (range) {
+		if (mouse_check_button_pressed(mb_left)) {
+			func();
+		}
+	}
+}
+
+#endregion
+
+
+function get_word() {
+	var n = irandom(array_length(map[map_index].word_list)-1);
+	if (n == word_id) {
+		n = irandom(array_length(map[map_index].word_list)-1);
+	}
+	word_id = n;
+	word_reveal = false;
+}
+
 
 function slider(x, y, width, height, line_w, line_color, func, offset = 0) {
 	static off = offset;
@@ -30,144 +192,7 @@ function draw_3d(spr, x, y, xscale, yscale, rot, col, alpha) {
 	}
 }
 
-function button(x, y, w, h, str, c1, c2, scl, outline, func) {
-	var range = (mouse_x > x && mouse_x < x+w && mouse_y > y && mouse_y < y+h);
-	
-	if (outline) {
-		draw_rectangle_color(x, y, x+w, y+h, c2, c2, c2, c2, true);
-	}
-	
-	draw_text_transformed_color(x+w/2, y+h/2, str, scl, scl, 0, c1, c1, c1, c1, 1);
 
-	if (range) {
-		
-		draw_rectangle_color(x, y, x+w, y+h, c2, c2, c2, c2, false);
-		draw_text_transformed_color(x+w/2, y+h/2, str, scl, scl, 0, c1, c1, c1, c1, 1);
-		
-		func();
-		
-	} else {
-		
-	}
-}
-
-function button_input(x, y, w, h, str, offset, c1, c2, scl, outline, func) {
-	var range = (mouse_x > x && mouse_x < x+w && mouse_y > y && mouse_y < y+h);
-	
-	if (outline) {
-		draw_rectangle_color(x, y, x+w, y+h, c2, c2, c2, c2, true);
-	}
-	
-	draw_text_transformed_color((x)+offset, y+h/2, str, scl, scl, 0, c1, c1, c1, c1, 1);
-
-	if (range) {
-		window_set_cursor(cr_beam);
-		
-		draw_rectangle_color(x, y, x+w, y+h, c2, c2, c2, c2, false);
-		draw_text_transformed_color((x)+offset, y+h/2, str, scl, scl, 0, c1, c1, c1, c1, 1);
-		
-		func();
-		
-	} else {
-		window_set_cursor(cr_default);
-	}
-}
-
-function button_filled(x, y, w, h, str, c1, c2, c3, scl, outline, func) {
-	var range = (mouse_x > x && mouse_x < x+w && mouse_y > y && mouse_y < y+h);
-	
-	if (outline) {
-		draw_rectangle_color(x, y, x+w, y+h, c2, c2, c2, c2, true);
-		draw_rectangle_color(x, y, x+w, y+h, c2, c2, c2, c2, false);
-	}
-	
-	draw_text_transformed_color(x+w/2, y+h/2, str, scl, scl, 0, c1, c1, c1, c1, 1);
-
-	if (range) {
-		
-		draw_rectangle_color(x, y, x+w, y+h, c3, c3, c3, c3, false);
-		draw_rectangle_color(x, y, x+w, y+h, c1, c1, c1, c1, true);
-		draw_text_transformed_color(x+w/2, y+h/2, str, scl, scl, 0, c1, c1, c1, c1, 1);
-		
-		func();
-		
-	} else {
-		
-	}
-}
-
-function button_round(x, y, w, h, str, width, c1, c2, scl, outline, func, sublist) {
-	var range = (mouse_x > x && mouse_x < x+w && mouse_y > y && mouse_y < y+h);
-	static sublist_open = false;
-	
-	if (outline) {
-		for (var i = 0; i < width; i+=0.5) {
-			draw_roundrect_color(x+i, y+i, (x+w)-i, (y+h)-i, c2, c2, true);
-		}
-	}
-	
-	draw_text_transformed_color(x+w/2, y+h/2, str, scl, scl, 0, c1, c1, c1, c1, 1);
-
-	if (range) {
-		
-		draw_roundrect_color(x, y, x+w, y+h, c2, c2, false);
-		draw_text_transformed_color(x+w/2, y+h/2, str, scl, scl, 0, c1, c1, c1, c1, 1);
-		
-		func();
-		
-		if (mouse_check_button_pressed(mb_right)) {
-			sublist_open = !sublist_open;
-			popup_x = mouse_x;
-			popup_y = mouse_y;
-		}
-		
-	} else {
-	}
-	
-	if (sublist_open) sublist();
-}
-
-function button_round_filled(x, y, w, h, str, width, c1, c2, c3, scl, outline, func) {
-	var range = (mouse_x > x && mouse_x < x+w && mouse_y > y && mouse_y < y+h);
-	
-	draw_roundrect_color(x, y, (x+w), (y+h), c3, c3, false);
-	
-	if (outline) {
-		for (var i = 0; i < width; i+=0.5) {
-			draw_roundrect_color(x+i, y+i, (x+w)-i, (y+h)-i, c2, c2, true);
-		}
-	}
-	
-	draw_text_transformed_color(x+w/2, y+h/2, str, scl, scl, 0, c1, c1, c1, c1, 1);
-
-	if (range) {
-		draw_roundrect_color(x, y, x+w, y+h, c2, c2, false);
-		draw_text_transformed_color(x+w/2, y+h/2, str, scl, scl, 0, c1, c1, c1, c1, 1);
-		
-		func();
-		
-		if (mouse_check_button_pressed(mb_right)) {
-			sublist_open = !sublist_open;
-			popup_x = mouse_x;
-			popup_y = mouse_y;
-		}
-	}
-}
-
-function circle_button(x, y, r, variable, func) {
-	draw_circle(x, y, r*1.2, true);
-	
-	if (variable) {
-		draw_circle(x, y, r*0.8, false);
-	}
-	
-	var range = (mouse_x > x-r/2 && mouse_x < x+r/2 && mouse_y > y-r/2 && mouse_y < y+r/2);
-	if (range) {
-		if (mouse_check_button_pressed(mb_left)) {
-			func();
-		}
-	}
-}
 
 function save_id(file, save) {
 	var str = json_stringify(save);
