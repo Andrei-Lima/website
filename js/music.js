@@ -20,6 +20,7 @@ makeAlbum(
   ]
 );
 
+// WaW
 makeAlbum(
   "we are watching", '../content/img/albums/waw.png', [
 
@@ -43,7 +44,6 @@ makeAlbum(
 
 for (var i = 0; i < album_list.length; i++) {
   var id = album_list[i];
-  
   createAlbum(id);
 }
 

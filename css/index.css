@@ -1,11 +1,19 @@
 
+body {
+  background: linear-gradient(180deg, var(--secondary-color) 10%, var(--third-color) 150%);
+}
+
 .app {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  background: linear-gradient(180deg, var(--secondary-color) 10%, var(--third-color) 150%);
+  background-image: url("../content/img/background/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  image-rendering: pixelated;
 }
 
 .display {
@@ -14,7 +22,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 #frame {
@@ -26,7 +33,16 @@
   width: 100px;
   height: 401px;
   text-align: left;
-  
+}
+
+.title p {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  border: 1px dotted var(--primary-color);
+  border-bottom: none;
+  border-right: none;
+  background: var(--background-color);
 }
 
 .link-list {
@@ -38,6 +54,7 @@
   border-right: none;
 
   padding: 0 5px;
+  background: var(--background-color);
 }
 
 .link {
@@ -57,13 +74,6 @@
 
 
 
-.title p {
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  border: 1px dotted var(--primary-color);
-  border-bottom: none;
-  border-right: none;
-}
+
 
 

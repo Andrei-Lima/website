@@ -44,7 +44,6 @@ for (var i = 0; i < cloud_number; i++) {
 function draw() {
   g.clearRect(0, 0, canvas.width, canvas.height);
   
-  
   for (let i = 0; i < cloud_list.length; i++) {
     var c = cloud_list[i];
     c.x -= c.spd;
@@ -63,7 +62,4 @@ function draw() {
 
   const ily = new Image();
   ily.src = '../content/img/sprites/ilu.png';
-  
-  g.drawImage(ily, canvas.width/4, 15);
-
 }

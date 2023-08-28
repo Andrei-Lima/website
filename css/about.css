@@ -1,0 +1,104 @@
+
+
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  padding: 10px 0;
+
+  border-bottom: 1px dotted var(--primary-color);
+}
+
+.pic img {
+  border-radius: 10%;
+  --pic-size: 125px;
+  width: var(--pic-size);
+  height: var(--pic-size);
+}
+
+.info li {
+  font-size: 16px;
+  margin: 0 25px;
+  list-style: circle;
+  padding-top: 5px;
+}
+
+.title {
+  width: fit-content;
+  margin: 0 auto;
+  padding: 0 10px;
+
+  text-align: center;
+  border: 1px dotted var(--primary-color);
+  border-top: none;
+}
+
+.title p {
+  font-size: 10px;
+  margin: 0;
+  padding: 0;
+
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+.socials {
+  width: 80%;
+  margin: 5px auto;
+  
+  border-bottom: 1px dotted var(--primary-color);
+
+  display: flex;
+  justify-content: center;
+}
+
+.socials a {
+  margin: 0 5px;
+}
+
+.socials img {
+  border-radius: 5px;
+  transition: .5s ease;
+}
+
+
+.badge-list {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  
+  width: 80%;
+  margin: 0 auto;
+  
+  border-bottom: 1px dotted var(--primary-color);
+}
+
+.bgd {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  background-color: #00000010;
+  border-radius: 15px;
+  padding: 5px;
+
+  margin: 10px;
+
+  width: 200px;
+}
+
+.bgd img {
+  width: 50px;
+  image-rendering: pixelated;
+}
+
+.bgd p {
+  font-size: 12px;
+}
+
