@@ -1,0 +1,28 @@
+
+body {
+  text-align: center;
+}
+
+
+
+
+
+.intro {
+
+
+  padding: 25px 0;
+  border: 1px dotted var(--primary-color);
+  border-left: none; border-right: none;
+}
+
+.about {
+  width: 80%;
+  margin: 25px auto;
+
+  padding: 5px 25px;
+  border-radius: 10px;
+
+  background-color: #00000015;
+
+  text-align: left;
+}

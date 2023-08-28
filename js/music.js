@@ -1,105 +1,141 @@
 
-const player  = document.getElementById("audio-source");
-const btnl    = document.getElementById("button-left");
-const btnr    = document.getElementById("button-right");
-const id      = document.getElementById("album-id");
-const t       = document.getElementById("album-title");
+let album_list = [];
 
-let list = [
-	{
-		title: "ROTTEN",
-		date: "16/08/2023",
-		cover: "./img/albums/rotten.png ",
-		musics: [
-			"./snd/rotten/podre.mp3",
-		],
-	},
-	{
-		title: "Horrific",
-		date: "22/03/2023",
-		cover: "./img/albums/horrific.png",
-		musics: [
-			"./snd/horrific/horrific.mp3",
-		],
-	},
-	{
-		title: "nostalgia",
-		date: "00/00/0000",
-		cover: "./img/albums/nostalgia.png",
-		musics: [
-			"./snd/nos/Nostalgia.mp3",
-			"./snd/nos/outro.mp3",
-			"./snd/nos/coziness.mp3",
-			"./snd/nos/by the sea.mp3",
-			"./snd/nos/could be better.mp3",
-			"./snd/nos/waterfall.mp3",
-		],
-	},
-	{
-		title: "we are watching",
-		date: "00/00/0000",
-		cover: "./img/albums/waw.png",
-		musics: [
-			"./snd/waw/snd3.mp3",
-			"./snd/waw/snd1.mp3",
-		],
-	},
-	{
-		title: "economic failure",
-		date: "00/00/0000",
-		cover: "./img/albums/him.png",
-		musics: [
-			"./snd/falhaeconomica/coordinates.mp3",
-			"./snd/falhaeconomica/him calm 2.mp3",
-			"./snd/falhaeconomica/home.mp3",
-			"./snd/falhaeconomica/way.mp3",
-			"./snd/falhaeconomica/afterlife.mp3",
-			"./snd/falhaeconomica/bar.mp3",
-			"./snd/falhaeconomica/duck.mp3",
-			"./snd/falhaeconomica/rekognition.mp3",
-			"./snd/falhaeconomica/yeah.mp3",
-		],
-	},
-];
+//#region ALBUMS
 
-let album_id = 0;
+// Nostalgia
+makeAlbum(
+  "nostalgia", '../content/img/albums/nostalgia.png', [
 
-btnl.onclick = () => {
-	if (album_id > 0) {
-		album_id --;
-		update();
-	}
+    makeSong(
+      "", "not much to say about this one :v", 
+      "../content/audio/albums/nostalgia/Nostalgia.mp3"
+    ),
+
+    makeSong(
+      "", "I wanted to make a track that resembles an old, calming game. I think it sounds wholesome <3", 
+      "../content/audio/albums/nostalgia/waterfall.mp3"
+    ),
+
+  ]
+);
+
+makeAlbum(
+  "we are watching", '../content/img/albums/waw.png', [
+
+    makeSong(
+      "", "this is the first time I'm using my real guitar, i like the low/dark tone i got for this one", 
+      "../content/audio/albums/wearewatching/snd3.mp3"
+    ),
+
+    makeSong(
+      "", "adventures", 
+      "../content/audio/albums/wearewatching/snd1.mp3"
+    ),
+
+  ]
+);
+
+
+//#endregion
+
+
+
+for (var i = 0; i < album_list.length; i++) {
+  var id = album_list[i];
+  
+  createAlbum(id);
 }
 
-btnr.onclick = () => {
-	if (album_id < list.length-1) {
-		album_id ++;
-		update();
-	}
+function createAlbum(album) {
+
+  var parent = document.getElementById("music-list");
+
+  var music_box = document.createElement("div");
+  music_box.className = "music-box";
+  
+
+  var album_info = document.createElement("div");
+  album_info.className = "album-info";
+  
+  var album_img = document.createElement("img");
+  album_img.classList = "album-img";
+  album_img.src = album.cover;
+  
+  var album_title = document.createElement("h2");
+  album_title.className = "album-title";
+  album_title.innerHTML = album.title;
+
+
+  album_info.append(album_img, album_title);
+  
+  music_box.append(album_info);
+
+  for (let i = 0; i < album.songs.length; i++) {
+
+    var songsDesc = album.songs[i].description;
+    var songsAudio = album.songs[i].audio;
+
+    var album_songs = document.createElement("div");
+    album_songs.className = "album-songs";
+    
+    var song_box = document.createElement("div");
+    song_box.className = "song-box";
+
+    var song_desc = document.createElement("div");
+    song_desc.className = "song-description";
+
+    var p1 = document.createElement("p");
+    p1.innerHTML = songsDesc;
+
+    var song_controller = document.createElement("div");
+    song_controller.className = "song-controller";
+
+    var audio = document.createElement("audio");
+    audio.controls = true;
+    audio.src = songsAudio;
+
+    song_desc.append(p1);
+    song_controller.append(audio);
+    song_box.append(song_desc, song_controller);
+    album_songs.append(song_box);
+    music_box.append(album_songs);
+
+  }
+
+  parent.append(music_box);
 }
 
-function update() {
-	var music = document.getElementById("music-list");
 
-	while(music.firstChild) {
-		music.removeChild(music.lastChild);
-	}
-
-	document.getElementById("album-img").src = list[album_id].cover;
-	t.innerHTML = list[album_id].title;
-
-	for (let i = 0; i < list[album_id].musics.length; i++) {		
-		var audio = document.createElement("audio");
-		audio.controls = true;
-		
-		var source = document.createElement("source");
-		source.src = list[album_id].musics[i];
-		source.type = "audio/mpeg";
-
-		audio.append(source);
-
-		document.getElementById("music-list").append(audio);
-	}
+function makeSong(title, desc, audio) {
+  var obj = {
+    title: title,
+    description: desc,
+    audio: audio,
+  }
+  
+  return obj;
 }
 
-update();
+function makeAlbum(title, cover, songs) {
+  var obj = {
+    title: title,
+    cover: cover,
+    songs: [],
+  }
+
+  for (var i = 0; i < songs.length; i++) {
+    var id = songs[i];
+    var song = {
+      title: id.title,
+      description: id.description,
+      audio: id.audio,
+    }
+
+    obj.songs.push(song);
+  }
+
+  album_list.push( obj );
+}
+
+
