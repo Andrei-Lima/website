@@ -5,6 +5,17 @@ let album_list = [];
 
 // Nostalgia
 makeAlbum(
+  "radio signals", '../content/img/albums/radiosignals.png', [
+
+    makeSong(
+      "globo", "for this one I tried to make a vaporwave track, filled with nostalgia. I would like to sing in some of these songs but my mic quality is trash and my singing skills are not even acceptable, but you gotta start somewhere right? xD -------- also I sampled a song from an advertisement from the 80s. (my first song using samples)",
+      "../content/audio/albums/radiosignals/globo.mp3"
+    ),
+    
+  ]
+);
+
+makeAlbum(
   "nostalgia", '../content/img/albums/nostalgia.png', [
 
     makeSong(

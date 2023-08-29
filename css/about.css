@@ -44,8 +44,10 @@
 
 .socials {
   width: 80%;
-  margin: 5px auto;
+  margin: 0 auto;
   
+  padding: 10px 0;
+
   border-bottom: 1px dotted var(--primary-color);
 
   display: flex;
@@ -94,7 +96,7 @@
 }
 
 .bgd img {
-  width: 50px;
+  width: 35px;
   image-rendering: pixelated;
 }
 
@@ -102,3 +104,55 @@
   font-size: 12px;
 }
 
+
+
+.language-learning {
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  
+  border-bottom: 1px dotted var(--primary-color);
+}
+
+.language-learning-logs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  width: 300px;
+  margin: 25px auto;
+}
+
+
+.lang {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  padding: 10px 15px;
+
+  background-color: #00000010;
+  border-radius: 10px;
+
+  margin: 5px 10px;
+}
+
+.lang p {
+  margin: 0;
+  padding-top: 10px;
+  font-size: 14px;
+}
+
+.lang img {
+  width: inherit;
+  height: inherit;
+
+  border-radius: 10%;
+}
+
+.flag {
+  width: 50px;
+  height: 35px;
+  text-align: center;
+}

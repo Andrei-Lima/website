@@ -29,7 +29,7 @@ body {
   background: var(--background-color);
 }
 
-.right-menu {
+.menu {
   width: 100px;
   height: 401px;
   text-align: left;
@@ -43,6 +43,8 @@ body {
   border-bottom: none;
   border-right: none;
   background: var(--background-color);
+  
+  border-top-left-radius: 5px;
 }
 
 .link-list {
@@ -53,12 +55,13 @@ body {
   border: 1px dotted var(--primary-color);
   border-right: none;
 
-  padding: 0 5px;
+  padding: 5px;
   background: var(--background-color);
+  
+  border-bottom-left-radius: 5px;
 }
 
 .link {
-  margin: 5px 0;
   cursor: pointer;
   display: flex;
   align-items: center;
