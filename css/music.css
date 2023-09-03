@@ -89,4 +89,22 @@
   border-radius: 15px;
 }
 
+.warning {
+  color: white;
+  background-color: #ff4a4a;
 
+  font-size: 8px;
+  text-transform: uppercase;
+  font-weight: light;
+
+  padding: 5px 10px;
+  border-radius: 5px;
+
+  width: fit-content;
+
+  right: 0;
+  margin-left: auto;
+  margin-right: 65px;
+
+  position: absolute;
+}

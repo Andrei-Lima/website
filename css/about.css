@@ -1,12 +1,14 @@
 
 
+.profile-box {
+  border-bottom: 1px dotted var(--primary-color);
+}
+
 .profile {
   display: flex;
   justify-content: center;
   align-items: top;
   padding: 10px 0;
-
-  border-bottom: 1px dotted var(--primary-color);
 }
 
 .pic img {
@@ -14,6 +16,8 @@
   --pic-size: 125px;
   width: var(--pic-size);
   height: var(--pic-size);
+
+  image-rendering: pixelated;
 }
 
 .info li {
@@ -155,4 +159,21 @@
   width: 50px;
   height: 35px;
   text-align: center;
+}
+
+
+
+.pnt1 {
+  position: absolute;
+  
+  width: 400px;
+
+  top: 11%;
+  left: 0;
+  right: 0;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  image-rendering: pixelated;
 }
