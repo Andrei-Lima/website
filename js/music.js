@@ -3,7 +3,6 @@ let album_list = [];
 
 //#region ALBUMS
 
-
 // Radio signals
 makeAlbum(
   "radio signals", '../content/img/albums/radiosignals.png', [
@@ -91,8 +90,18 @@ makeAlbum(
     ),
 
     makeSong(
+      "", "i untuned all of my strings for this one", 
+      "../content/audio/albums/wearewatching/newone.mp3"
+    ),
+
+    makeSong(
       "", "adventures", 
       "../content/audio/albums/wearewatching/snd1.mp3"
+    ),
+    
+    makeSong(
+      "", "recorded this at 1am, more out-of-tempo out-of-tune out-of-touch music", 
+      "../content/audio/albums/wearewatching/two minutes.mp3"
     ),
 
   ]
@@ -139,10 +148,7 @@ makeAlbum(
   ]
 );
 
-
 //#endregion
-
-
 
 for (var i = 0; i < album_list.length; i++) {
   var id = album_list[i];
@@ -150,34 +156,30 @@ for (var i = 0; i < album_list.length; i++) {
 }
 
 function createAlbum(album) {
-
   var parent = document.getElementById("music-list");
 
-  var music_box = document.createElement("div");
-  music_box.className = "music-box";
-  
+  var music_box         = document.createElement("div");
+  music_box.className   = "music-box";
 
-  var album_info = document.createElement("div");
-  album_info.className = "album-info";
+  var album_info        = document.createElement("div");
+  album_info.className  = "album-info";
   
-  var album_img = document.createElement("img");
-  album_img.classList = "album-img";
-  album_img.src = album.cover;
+  var album_img         = document.createElement("img");
+  album_img.classList   = "album-img";
+  album_img.src         = album.cover;
   
-  var album_title = document.createElement("h2");
+  var album_title       = document.createElement("h2");
   album_title.className = "album-title";
   album_title.innerHTML = album.title;
-
 
   album_info.append(album_img, album_title);
   
   music_box.append(album_info);
 
   for (let i = 0; i < album.songs.length; i++) {
-
-    var songsDesc = album.songs[i].description;
-    var songsAudio = album.songs[i].audio;
-    var songsLoud = album.songs[i].loudAdvice;
+    var songsDesc   = album.songs[i].description;
+    var songsAudio  = album.songs[i].audio;
+    var songsLoud   = album.songs[i].loudAdvice;
 
     var album_songs = document.createElement("div");
     album_songs.className = "album-songs";
@@ -193,8 +195,6 @@ function createAlbum(album) {
 
     var song_controller = document.createElement("div");
     song_controller.className = "song-controller";
-
-    
 
     var audio = document.createElement("audio");
     audio.controls = true;
@@ -213,7 +213,6 @@ function createAlbum(album) {
 
     album_songs.append(song_box);
     music_box.append(album_songs);
-
   }
 
   parent.append(music_box);
