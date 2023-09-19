@@ -8,8 +8,8 @@ makeAlbum(
   "radio signals", '../content/img/albums/radiosignals.png', [
 
     makeSong(
-      "globo", "for this one I tried to make a vaporwave track, filled with nostalgia. I would like to sing in some of these songs but my mic quality is trash and my singing skills aren't close to acceptable, but you gotta start somewhere right? xD -------- also I sampled a song from an advertisement from the 80s. (my first song using samples)",
-      "../content/audio/albums/radiosignals/globo.mp3"
+      "globo", "80",
+      "../content/audio/albums/radiosignals/globo2.mp3"
     ),
     
   ]
@@ -78,7 +78,6 @@ makeAlbum(
 
   ]
 );
-
 
 // WaW
 makeAlbum(
