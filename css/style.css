@@ -15,6 +15,7 @@ body {
   --secondary-color: #f2b6fb;
   --third-color: #F27493;
   --background-color: #de9fd8;
+  --border-box-size: 4px;
 
 }
 
@@ -65,8 +66,8 @@ warn {
 #fake-ad-img {
 
   border: 1px solid var(--primary-color);
-  border-bottom: 5px solid var(--primary-color);
-  border-left: 5px solid var(--primary-color);
+  border-bottom: var(--border-box-size) solid var(--primary-color);
+  border-left: var(--border-box-size) solid var(--primary-color);
   
   width: 175px;
 

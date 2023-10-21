@@ -1,4 +1,30 @@
 
+
+const h1            = document.getElementById("display-string");
+const sc_str        = "follow me on my soundcloud!!! >:D";
+const letter_length = 15;
+let str_index       = 0;
+let increase        = true;
+
+function set_display() {
+  h1.innerHTML = "";
+  for (let i = 0; i < str_index; i++) {
+    var str = sc_str.charAt(i);
+    h1.innerHTML += str;
+  }
+}
+
+setInterval(function(){
+  if (str_index <= sc_str.length) {
+    str_index += 1;
+    set_display();
+  }
+}, 200);
+
+
+
+//#region Display Musics
+
 let album_list = [];
 
 //#region ALBUMS
@@ -98,6 +124,11 @@ makeAlbum(
       "../content/audio/albums/wearewatching/snd1.mp3"
     ),
     
+    makeSong(
+      "", "first time using my guitar", 
+      "../content/audio/albums/wearewatching/nihil.mp3"
+    ),
+
     makeSong(
       "", "recorded this at 1am, more out-of-tempo out-of-tune out-of-touch music", 
       "../content/audio/albums/wearewatching/two minutes.mp3"
@@ -251,4 +282,4 @@ function makeAlbum(title, cover, songs) {
   album_list.push( obj );
 }
 
-
+//#endregion
