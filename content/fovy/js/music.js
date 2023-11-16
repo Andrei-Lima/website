@@ -125,7 +125,7 @@ makeAlbum(
     ),
     
     makeSong(
-      "", "first time using my guitar", 
+      "", "first time using my electric guitar", 
       "../content/audio/albums/wearewatching/nihil.mp3"
     ),
 
