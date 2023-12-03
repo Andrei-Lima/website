@@ -18,3 +18,7 @@ h1, h2, h3 {
 p {
   color: var(--subtext-color);
 }
+
+a {
+  transition: all 50ms ease-in-out;
+}
