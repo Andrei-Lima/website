@@ -12,7 +12,9 @@ body {
   background-image: url("../content/img/background/background.png");
   background-repeat: no-repeat;
   background-size: cover;
-  
+
+  background-position-y: -70px;
+
   image-rendering: pixelated;
 }
 
@@ -130,4 +132,11 @@ body {
   width: 250px;
   position: absolute;
   image-rendering: pixelated;
+}
+
+@media screen and (max-width: 1200px){
+  .app {
+    background-position-y: 0px;
+  }
+  
 }

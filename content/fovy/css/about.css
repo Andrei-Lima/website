@@ -180,3 +180,16 @@
 
 
 
+#ducky {
+  position: absolute;
+  right: 0;
+  left: 0;
+
+  top: 80px;
+}
+
+#ducky-img {
+  width: 100px;
+  image-rendering: pixelated;
+}
+
