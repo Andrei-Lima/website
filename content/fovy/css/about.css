@@ -1,7 +1,10 @@
 
 
-.profile-box {
+.sep {
   border-bottom: 1px dotted var(--primary-color);
+}
+
+.profile-box {
 }
 
 .profile {
@@ -52,7 +55,6 @@
   
   padding: 10px 0;
 
-  border-bottom: 1px dotted var(--primary-color);
 
   display: flex;
   justify-content: center;
@@ -78,7 +80,6 @@
   width: 80%;
   margin: 0 auto;
   
-  border-bottom: 1px dotted var(--primary-color);
 }
 
 .bgd {
@@ -115,7 +116,6 @@
   width: 80%;
   margin: 0 auto;
   
-  border-bottom: 1px dotted var(--primary-color);
 }
 
 .language-learning-logs {

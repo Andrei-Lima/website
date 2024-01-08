@@ -13,7 +13,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 
-  background-position-y: -70px;
+  background-position-y: 0px;
 
   image-rendering: pixelated;
 }
