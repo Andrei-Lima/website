@@ -4,126 +4,94 @@ body {
   background-color: var(--background-color);
 }
 
-.header-container {
-  background-color: #00000020;
-  padding: 20px 100px;
+.menu {
+  padding: 5px 0;
+  border-bottom: 1px dotted var(--subtext-color);
+}
+
+.socials {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+.socials a {
+  padding: 0 8px;
+  margin: 0;
+
+  color: var(--subtext-color);
+  border: 1px solid var(--subtext-color);
+}
+
+.page {
+  width: 80%;
+  margin: 25px auto;
+  text-align: left;
+}
+
+.section {
+  margin-bottom: 50px;
+}
+
+.title {
+  padding-left: 25px;
+  font-size: 24px;
+  border-bottom: 2px dotted #6d6d6d;
+}
+
+
+
+.album-list {
+  padding: 5px;
+}
+
+.buttons {
+  width: 300px;
 
   display: flex;
   align-items: center;
+  justify-content: space-between;
 
-  flex-direction: column;
 }
 
-.text1 h1 {
-  font-size: 48px;
-}
-
-.text1 h2 {
-  font-size: 36px;
-}
-
-.about {
-  color: lightgray;
-  text-decoration: none;
-}
-
-.about:hover {
-  color: white;
-  text-decoration: underline;
-}
-
-
-
-.h-item {
-  margin: 25px 0;
-}
-
-#hamb {
-  position: fixed;
-  margin: 10px;
-  color: white;
-  background-color: rgb(80, 79, 79);
-  padding: 0px 15px;
-  border-radius: 5px;
-
-  top: 0;
-  left: 0;
-
-  font-size: 24px;
+button {
+  background-color: transparent;
+  border: 1px solid var(--subtext-color);
+  border-bottom: 3px solid var(--subtext-color);
+  color: var(--subtext-color);
 
   cursor: pointer;
-  -webkit-user-select: none;
-  z-index: 2023;
-}
-
-.active {
-  transition: .5s ease;
-  left: 0px;
 }
 
 
-.stripe {
-  display: block;
+.album-info {
+  width: 300px;
 
-  position: fixed;
-  top: 0;
-  width: inherit;
-  height: 56px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  
+  padding: 5px 0;
 
-  background-color: #202020;
-
-  left: inherit;
+  border-bottom: 1px dotted var(--subtext-color);
 }
 
-.menu {
-  width: 350px;
-  height: 100%;
-
-  position: fixed;
-  background-color: #303030;
-  transition: .5s ease;
-  left: -400px;
-
-  box-shadow: 3px 2px 10px 2px #0f0f0f;
-}
-
-.menu.active {
-  left: 0;
-}
-
-.menu ul {
-  margin: 55px 0;
-  padding: 0;
-}
-
-.menu li {
-  padding: 10px 0;
-
-  list-style: none;
-  transition: 0.2s ease;
-}
-
-.menu li:hover {
-  background-color: #202020;
-}
-
-.menu a {
-  display: block;
-  width: inherit;
-
-  color: var(--subtext-color);
-  font-size: 24px;
-  text-decoration: none;
-}
-
-.news {
-  margin: 100px;
-}
-
-.news h2 {
-  margin: 40px;
-}
-
-.news img {
+#album-cover {
+  width: 100px;
   border-radius: 5px;
+}
+
+.song {
+  width: 600px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin: 15px;
+}
+
+.song audio {
+  height: 28px;
 }

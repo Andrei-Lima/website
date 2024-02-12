@@ -10,37 +10,51 @@
   <title>Andrei Scatolin</title>
 </head>
 <body>
-  <div id="hamb">=</div>
-  <div class="menu" id="menu">
-    <div class="stripe"></div>
-    <ul>
-      <li><a href="#games">Games</a></li>
-      <li><a href="">Musics</a></li>
-    </ul>
+  <div class="menu">
+    <p>Andrei Scatolin</p>
+
+    <div class="socials">
+      <a href="https://twitter.com/amdreidev">t</a>
+      <a href="https://youtube.com/amdrei">y</a>
+    </div>
   </div>
 
-  <header>
-    <div class="header-container">
-      <div class="text1 h-item">
-        <h1><a href="" class="about">Andrei Scatolin</a></h1>
-      </div>
-      <div class="text2 h-item">
-        <p>GameDev and Musician</p>
+  <div class="page">
+    <div class="section">
+      <p class="title">Info</p>
+      <div class="info">
+        <p>Hello, I am a game developer & musician since 2019</p>
+        <p>If you wanna know more about me, go find it.</p>
       </div>
     </div>
-  </header>
+    
+    <div class="section">
+      <p class="title rainbowText">Music catalog</p>
+      <div class="album-list">
+        <div class="buttons">
+          <button id="left-album"><</button>
+          <button id="right-album">></button>
+        </div>
+        
+        <div class="album-info">
+          <p id="album-name">default</p>
+          <img id="album-cover">
+        </div>
 
-  <div class="news">
-    <h2>Check out my new game!</h2>
-    <img src="./content/img/wallpaper.png" width="600px">
+        <div id="song-list">
+
+        </div>
+      </div>
+    </div>
+    
+    <div class="section">
+      <p class="title">Game catalog</p>
+      <div class="">
+      </div>
+    </div>
   </div>
 
-  <br><br><br><br><br><br>
-
-  <div id="games" style="transition: all 50ms ease-in-out;">
-    <h2>games</h2>
-  </div>
-
-  <script src="./js/hamb.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/music.js"></script>
 </body>
 </html>
