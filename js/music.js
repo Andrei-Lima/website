@@ -21,12 +21,10 @@ class Album {
 
 let albumList = [];
 
-var ALBUM1 = new Album("We are Watching", "./content/img/waw.png", []);
-ALBUM1.songList.push(new Song("1", "./content/audio/albums/wearewatching/newone.mp3"));
-ALBUM1.songList.push(new Song("2", "./content/audio/albums/wearewatching/nihil.mp3"));
-ALBUM1.songList.push(new Song("3", "./content/audio/albums/wearewatching/snd1.mp3"));
-ALBUM1.songList.push(new Song("4", "./content/audio/albums/wearewatching/snd3.mp3"));
-ALBUM1.songList.push(new Song("5", "./content/audio/albums/wearewatching/two minutes.mp3"));
+
+var ALBUM1 = new Album("Radio Signals", "./content/img/radiosignals.png", []);
+ALBUM1.songList.push(new Song("Radio Signals", "./content/audio/albums/radiosignals/globo2.mp3"));
+ALBUM1.songList.push(new Song("Oh, child", "./content/audio/albums/radiosignals/Ela era um anjo.mp3"));
 albumList.push(ALBUM1);
 
 var ALBUM1 = new Album("Reverendo Fascista", "./content/img/reverendo fascista.png", []);
@@ -35,7 +33,15 @@ ALBUM1.songList.push(new Song("Trazedores da Morte", "./content/audio/albums/rev
 ALBUM1.songList.push(new Song("Marte", "./content/audio/albums/reverendo/GUITAR MOOD.mp3"));
 albumList.push(ALBUM1);
 
-let albumIndex = albumList.length-1;
+var ALBUM1 = new Album("We are Watching", "./content/img/waw.png", []);
+ALBUM1.songList.push(new Song("1", "./content/audio/albums/wearewatching/newone.mp3"));
+ALBUM1.songList.push(new Song("2", "./content/audio/albums/wearewatching/nihil.mp3"));
+ALBUM1.songList.push(new Song("3", "./content/audio/albums/wearewatching/snd1.mp3"));
+ALBUM1.songList.push(new Song("4", "./content/audio/albums/wearewatching/snd3.mp3"));
+ALBUM1.songList.push(new Song("5", "./content/audio/albums/wearewatching/two minutes.mp3"));
+albumList.push(ALBUM1);
+
+let albumIndex = 0;
 
 
 document.getElementById("left-album").onclick = () => {

@@ -1,10 +1,12 @@
 
 you have to maintain an underground bunker
-
 the outside world is dark, empty and unapologetic
 
 
-the player is living in the bunker and has to do basic chores to do
+
+
+
+the player is living in a bunker and has to do basic chores to do
 
 like:
 
@@ -14,7 +16,17 @@ like:
 
 
 
+
+
+
+
 mechanical ideas:
 
 - Game uses users computer real time in game
+- Game creates files in the players computer:
+{
+  somewhere in the game, the player will be lured to use a command in the games computer, that
+  "connects" with the real players computer, sending data.
 
+  or maybe you'll be the one to send data to the players computer, idk
+}
