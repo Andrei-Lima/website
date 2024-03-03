@@ -8,7 +8,7 @@ function update() {
   for (let i = 0; i < elements.length; i++) {
     generateRainbowText(elements[i]);
   }
-  rainbowOffset -= 0.1;
+  rainbowOffset -= 0.02;
 }
 
 

@@ -95,3 +95,39 @@ button {
 .song audio {
   height: 28px;
 }
+
+
+/* Art */
+.art-list {
+  margin: 10px;
+
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap-reverse;
+  align-items: center;
+  justify-content: center;
+}
+
+.art {
+  width: fit-content;
+  padding: 10px;
+  
+  text-align: center;
+
+  transition: .5s ease;
+  border-radius: 5px;
+}
+
+.art:hover {
+  background-color: #0e0e0e;
+}
+
+.image img {
+  border-radius: 5px;
+
+  width: fit-content;
+  border: 1px solid gray;
+
+  max-width: 500px;
+}
+
