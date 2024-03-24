@@ -22,9 +22,11 @@ class Album {
 let albumList = [];
 
 
-var ALBUM1 = new Album("Radio Signals", "./content/img/radiosignals.png", []);
+var ALBUM1 = new Album("Radio Signals", "./content/img/album 1.png", []);
 ALBUM1.songList.push(new Song("Radio Signals", "./content/audio/albums/radiosignals/globo2.mp3"));
 ALBUM1.songList.push(new Song("Oh, child", "./content/audio/albums/radiosignals/Ela era um anjo.mp3"));
+ALBUM1.songList.push(new Song("Horrific", "./content/audio/albums/radiosignals/emotional.mp3"));
+ALBUM1.songList.push(new Song("Box", "./content/audio/albums/radiosignals/Nostalgia.mp3"));
 albumList.push(ALBUM1);
 
 var ALBUM1 = new Album("Reverendo Fascista", "./content/img/reverendo fascista.png", []);
