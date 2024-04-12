@@ -10,112 +10,58 @@
   <title>Andrei Scatolin</title>
 </head>
 <body>
-  
-  <video class="video" autoplay>
-    <source src="./content/video/ddd.mp4">
-  </video>
+  <canvas id="canvas">
+  </canvas>
 
   <div class="menu" >
     <p>Andrei Scatolin</p>
+  </div>
 
-    <div class="socials">
-      <a href="https://twitter.com/amdreidev">t</a>
-      <a href="https://youtube.com/amdrei">y</a>
-    </div>
+  <div class="links">
+    <p>𝓽𝓻𝓪𝓿𝓮𝓵𝓮𝓻</p>
+    <a href="songs.html">Songs</a>
+    <a href="#games">Games</a>
+    <a href="art.html">Art</a>
+  </div>
+
+  <div class="background-song">
+    <audio controls autoplay loop>
+      <source src="./content/audio/weird song.mp3">
+    </audio>
+  </div>
+
+  <div id="ad">
+    <img id="img-ad">
   </div>
 
   <div class="page">
 
-    <div class="section">
+    <div class="section" id="info">
       <p class="title">Info</p>
       <div class="info">
         <p>Hello, I am a game developer & musician since 2019</p>
         <p>If you wanna know more about me, go find it.</p>
       </div>
-    </div>
-    
-    <div class="section">
-      <p class="title rainbowText">Songs</p>
-      <div class="album-list">
-        <div class="buttons">
-          <button id="left-album"><</button>
-          <button id="right-album">></button>
-        </div>
-        
-        <div class="album-info">
-          <p id="album-name">default</p>
-          <img id="album-cover">
-        </div>
-
-        <div id="song-list">
-
-        </div>
+  
+      <div class="social">
+        <p>i post videos here: <a href="https://youtube.com/@amdrei"target="blank">[youtube]</a></p>
+        <p>i post photos here: <a href="https://instagram.com/ammdrei" target="blank">[instagram]</a></p>
+        <p>i stream here: <a href="https://twitch.tv/amdreiscatolim" target="blank">[twitch]</a></p>
       </div>
     </div>
     
-    <div class="section">
-      <p class="title">Games</p>
-      <a class="game-link" href="">
-        <img src="" alt="">
-        <p>Untitled</p>
-      </a>
-    </div>
-
-    <div class="section">
-      <p class="title">Art</p>
-      
-      <div class="art-list">
-        
-        <div class="art">
-          <div class="image">
-            <img src="./content/img/horrific.png" style="width: 280px;">
-          </div>
-          <p>Horrific</p>
-        </div>
-        <div class="art">
-          <div class="image">
-            <img src="./content/img/waw.png" style="width: 150px; margin: 0 70px;">
-          </div>
-          <p>elaborate eye</p>
-        </div>
-        <div class="art">
-          <div class="image">
-            <img src="./content/img/uncoventional face.png" style="width: 360px;">
-          </div>
-          <p>pseudo-estranhamental</p>
-        </div>
-        <div class="art">
-          <div class="image">
-            <img src="./content/img/art.png" style="width: 400px;">
-          </div>
-          <p>eternal crimson</p>
-        </div>
-        <div class="art">
-          <div class="image">
-            <img src="./content/img/freinds.png" style="width: 400px;">
-          </div>
-          <p>Friends</p>
-        </div>
-      </div>
-      <div class="art">
-        <div class="image">
-          <img src="./content/img/album.png" style="width: 280px;">
-        </div>
-        <p>album</p>
-      </div>
-    </div>
-  </div>
-
-  <div>
     <div>
-      <div class="links">
+      <div class="outro">
         <p class="title">Arquives</p>
         <a href="./content/gamehistorytime/inside.txt">Game 1</a>
       </div>
     </div>
   </div>
 
+  <button id="button1">CLICK ME :D</button>
+
   <script src="./js/main.js"></script>
-  <script src="./js/music.js"></script>
+  <script src="./js/ad.js"></script>
+  <script src="./js/index.js"></script>
 </body>
 </html>

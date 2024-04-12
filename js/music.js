@@ -52,7 +52,7 @@ document.getElementById("left-album").onclick = () => {
 }
 
 document.getElementById("right-album").onclick = () => {
-  if (albumIndex < albumList.length) albumIndex ++;
+  if (albumIndex < albumList.length-1) albumIndex ++;
   update();
 }
 
