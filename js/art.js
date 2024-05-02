@@ -10,10 +10,18 @@ class Art {
 
 let artList = [];
 
+function appendArt(src, name) {
+  artList.push(new Art(src, name));
+}
 
 
-artList.push(new Art("horrific.png", "Horrific"));
-artList.push(new Art("1.jpg", "reptile master"));
+
+appendArt("horrific.png", "Horrific");
+appendArt("1.jpg", "Reptile Master");
+appendArt("uncoventional face.png", "pseudo-estranhamental");
+
+
+
 
 
 for (let i=0; i<artList.length; i++) {
@@ -36,7 +44,5 @@ function createArt(src, title) {
 
   ART_DIV.append(div1);
 
+
 }
-
-
-
