@@ -254,8 +254,13 @@ button:hover {
     display: block;
   } 
 
+  .link-anchors a {
+    font-size: 28px;
+  }
+
   .menu-flowers {
-    height: 40px;
+    width:auto;
+    height: auto;
   }
 
   #canvas {
@@ -268,6 +273,16 @@ button:hover {
     right:0px;
     top:110px;
     left:auto;bottom:auto;
+  }
+
+  .menu img {
+    padding:0;
+    width: 250px;
+  }
+
+  #img-ad {
+    width: 150px;
+    height: 55px;
   }
 }
 
