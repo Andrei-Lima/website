@@ -28,7 +28,7 @@ ALBUM1.songList.push(new Song("Horrific", "./content/audio/albums/radiosignals/e
 ALBUM1.songList.push(new Song("Box", "./content/audio/albums/radiosignals/Nostalgia.mp3"));
 albumList.push(ALBUM1);
 
-var ALBUM1 = new Album("Reverendo Fascista", "./content/img/reverendo fascista.png", []);
+var ALBUM1 = new Album("terrible old doom metal project", "./content/img/reverendo fascista.png", []);
 ALBUM1.songList.push(new Song("Redundante Mente", "./content/audio/albums/reverendo/Stoner metal.mp3"));
 ALBUM1.songList.push(new Song("Trazedores da Morte", "./content/audio/albums/reverendo/doom metal.wav"));
 ALBUM1.songList.push(new Song("Marte", "./content/audio/albums/reverendo/GUITAR MOOD.mp3"));

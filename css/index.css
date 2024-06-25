@@ -3,6 +3,10 @@ body {
   text-align: center;
   background-color: var(--background-color);
   --menu-opacity: 50%;
+
+  background-image: url("../content/img/background/background.png");
+
+  /*background-image: url("../content/img/background/clouds.png");*/
 }
 
 .top-bar {
@@ -60,17 +64,58 @@ body {
   width: 80%;
   margin: 25px auto;
   text-align: left;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+
 }
 
 .section {
   width: fit-content;
-  margin-bottom: 100px;
+  background-color:#A0A0A0;
+  color: black;
+  border: 2px solid #505050;
+}
+.section .title{
+  border: none;
+}
+.section p {
+  color: black;
+}
+
+.content {
+  border: 1px solid #303030;
+  margin:5px;
+  padding: 10px;
+  background-color:#D0D0D0;
+}
+
+.topbar {
+  height:14px;
+  display: flex;
+  justify-content:space-between;
+  align-items:flex-start;
+
+  border-bottom: 1px solid #505050;
+  image-rendering:pixelated;
+}
+
+.close {
+  border:none;
+  padding:0;
+  margin:0;
+}
+.close:hover {
+  padding:0;
+  margin:0;
+  border:none;
 }
 
 .title {
-  padding-left: 25px;
-  font-size: 24px;
-  border-bottom: 2px dotted var(--dotted-color);
+  height: 2px;
+  padding-left: 5px;
+  margin-bottom: 2px;
 }
 
 
@@ -171,27 +216,34 @@ button:hover {
 }
 
 .links {
-  height: 100px;
-  padding: 70px 50px;
+  background-color: #00000070;
+  border-radius: 5px;
+
+  width: 300px;
+  padding: 40px 0px;
   font-size: 24px;
+
+  position: fixed;
 }
 
 .link-anchors {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
+  text-align: left;
 }
 
 .links a {
   width: 190px;
-  margin: 25px 15px;
+  margin: 5px 0px;
   color: var(--link-color);
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 38px;
+  font-size: 28px;
   font-weight: lighter;
+  font-family: "Comic Sans MS", sans-serif;
 }
 
 .links a:hover {
@@ -217,8 +269,9 @@ button:hover {
 }
 
 .video {
-  position: fixed;
+  position: absolute;
   left: 0;
+  top: 100;
   z-index: -999;
 
   width: 100%;
@@ -287,10 +340,34 @@ button:hover {
 }
 
 
+.side-nav {
+  position: absolute;
+  right: 5px;
+  top: 110px;
+  
+  width: 200px;
+}
+
+.side-nav img {
+  width: inherit;
+  border-radius:5px;
+}
 
 
 
 
+/* OLD SECTION DIV */
+
+.old-section {
+  width: fit-content;
+  margin-bottom: 100px;
+}
+
+.old-title {
+  padding-left: 25px;
+  font-size: 24px;
+  border-bottom: 2px dotted var(--dotted-color);
+}
 
 
 

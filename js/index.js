@@ -3,6 +3,7 @@ const canvas = document.getElementById("canvas");
 const g = canvas.getContext("2d");
 
 
+
 class Star {
   constructor(x, y) {
     this.x = x; this.y = y;
@@ -32,6 +33,13 @@ let cat = {x:canvas.width/2, y:canvas.height/2}
 let dx = 1, dy = 1;
 let cat_img = new Image();
 cat_img.src = "./content/img/cat.png";
+
+
+
+setInterval(()=>{
+},600);
+
+
 
 setInterval(update, 15);
 
