@@ -5,6 +5,9 @@ setInterval(update, 15);
 
 function update() {
   var elements = document.getElementsByClassName("rainbowText");
+  elements.onclick = () => {
+    console.log("aeaea");
+  }
   for (let i = 0; i < elements.length; i++) {
     generateRainbowText(elements[i]);
   }
