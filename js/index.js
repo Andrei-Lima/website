@@ -21,7 +21,6 @@ class Star {
   }
 }
 
-
 document.getElementById("button1").onclick = () => {
   create_star(2+Math.floor(Math.random()*4));
 }
@@ -30,7 +29,7 @@ document.getElementById("button1").onclick = () => {
 const gravity = 0.1;
 let star_arr = [];
 let cat = {x:canvas.width/2, y:canvas.height/2}
-let dx = 1, dy = 1;
+let dx = -1, dy = -1;
 let cat_img = new Image();
 cat_img.src = "./content/img/cat.png";
 
@@ -59,11 +58,11 @@ function update() {
   var cw = cat_img.width * cat_size;
   var ch = cat_img.height * cat_size;
 
-  if (cat.x+cw/2 > canvas.width || cat.x-cw/2 < 0) {
+  if (cat.x+cw/2 > canvas.width || cat.x-cw/2 < -50) {
     dx = dx * -1;
   }
 
-  if (cat.y+ch/2 > canvas.height || cat.y-ch/2 < 0) {
+  if (cat.y+ch/2 > canvas.height || cat.y-ch/2 < -50) {
     dy = dy * -1;
   }
 
@@ -87,7 +86,7 @@ cat.y = Math.floor(Math.random() * window.innerHeight);
 
 function create_star(val) {
   for (var i = 0; i<val; i++) {
-    var star = new Star(100, 200);
+    var star = new Star(canvas.width/2, 200);
     star.hsp = (Math.random()*3.00)-1.00;
     star.vsp -= Math.random()*4.00;
 
