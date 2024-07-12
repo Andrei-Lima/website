@@ -366,6 +366,18 @@ button:hover {
 }
 
 
+.band {
+  position:absolute;
+  right: 50px;
+  top: 475px;
+}
+
+.band img {
+  width: 200px;
+  border: 3px solid var(--link-color);
+}
+
+
 .page-part {
   width: 40%;
   display: flex;
