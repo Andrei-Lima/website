@@ -26,6 +26,7 @@ ALBUM1.songList.push(new Song("Radio Signals", "./content/audio/albums/radiosign
 ALBUM1.songList.push(new Song("Oh, child", "./content/audio/albums/radiosignals/Ela era um anjo.mp3"));
 ALBUM1.songList.push(new Song("Horrific", "./content/audio/albums/radiosignals/emotional.mp3"));
 ALBUM1.songList.push(new Song("Box", "./content/audio/albums/radiosignals/Nostalgia.mp3"));
+ALBUM1.songList.push(new Song("nothingness", "./content/audio/sad nothingness.mp3"));
 albumList.push(ALBUM1);
 
 var ALBUM1 = new Album("terrible old doom metal project", "./content/img/reverendo fascista.png", []);
